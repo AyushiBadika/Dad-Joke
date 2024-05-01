@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  background: linear-gradient(to left bottom, lightblue, lightpink, lightblue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  width: 85%;
+  text-align: center;
+  color: darkgreen;
+}
+
+.heading {
+  font-size: 35px;
+  font-weight: 200;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.joke {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 40px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  width: 300px;
+  color: darkgreen;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, darkgreen 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loading {
+  --w: 10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0,
+    calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0, calc(-5 * var(--w)) 0,
+    calc(-6 * var(--w)) 0, calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0,
+    calc(-9 * var(--w)) 0;
+  animation: l16 2s infinite;
+}
+.loading:before {
+  content: "Loading...";
+}
+@keyframes l16 {
+  20% {
+    text-shadow: calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0 red,
+      calc(-3 * var(--w)) 0, calc(-4 * var(--w)) 0 #ffa516,
+      calc(-5 * var(--w)) 0 #63fff4, calc(-6 * var(--w)) 0,
+      calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0 green, calc(-9 * var(--w)) 0;
+  }
+  40% {
+    text-shadow: calc(-1 * var(--w)) 0, calc(-2 * var(--w)) 0 red,
+      calc(-3 * var(--w)) 0 #e945e9, calc(-4 * var(--w)) 0,
+      calc(-5 * var(--w)) 0 green, calc(-6 * var(--w)) 0 orange,
+      calc(-7 * var(--w)) 0, calc(-8 * var(--w)) 0 green, calc(-9 * var(--w)) 0;
+  }
+  60% {
+    text-shadow: calc(-1 * var(--w)) 0 lightblue, calc(-2 * var(--w)) 0,
+      calc(-3 * var(--w)) 0 #e945e9, calc(-4 * var(--w)) 0,
+      calc(-5 * var(--w)) 0 green, calc(-6 * var(--w)) 0,
+      calc(-7 * var(--w)) 0 yellow, calc(-8 * var(--w)) 0 #ffa516,
+      calc(-9 * var(--w)) 0 red;
+  }
+  80% {
+    text-shadow: calc(-1 * var(--w)) 0 lightblue, calc(-2 * var(--w)) 0 yellow,
+      calc(-3 * var(--w)) 0 #63fff4, calc(-4 * var(--w)) 0 #ffa516,
+      calc(-5 * var(--w)) 0 red, calc(-6 * var(--w)) 0,
+      calc(-7 * var(--w)) 0 grey, calc(-8 * var(--w)) 0 #63fff4,
+      calc(-9 * var(--w)) 0;
+  }
+}
